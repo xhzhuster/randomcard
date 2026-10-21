@@ -3,5 +3,5 @@ services:
     name: randomcard
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn web_app:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT web_app:app
     plan: free
